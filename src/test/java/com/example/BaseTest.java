@@ -3,6 +3,7 @@ package com.example;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.example.helper.AppContainerController;
+import com.example.helper.PropertyLoader;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
@@ -20,7 +21,7 @@ import static com.codeborne.selenide.Selenide.*;
 @Listeners({AllureTestNg.class})
 public class BaseTest {
 
-    public static final String APP_URL = "https://127.0.0.1:8443";
+    public static final String APP_URL = PropertyLoader.getProperty("baseUrl");
 
     @BeforeClass
     public void setUp() {

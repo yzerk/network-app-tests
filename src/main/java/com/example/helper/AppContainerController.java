@@ -15,7 +15,9 @@ public class AppContainerController {
     public static final String DOCKER_DOWN_CMD = "docker compose down";
     public static final String DOCKER_UP_CMD = "docker compose up -d";
     public static final String DOCKER_CHECK_STATUS_CMD = "docker inspect -f {{.State.Running}} unifi-network-application";
-    public static final String DOCKER_WEB_SERVER_STATUS_CMD = "docker exec unifi-network-application curl -sk -w %{http_code}\\n https://localhost:8443";
+
+    public static final String APP_URL = PropertyLoader.getProperty("baseUrl");
+    public static final String DOCKER_WEB_SERVER_STATUS_CMD = "docker exec unifi-network-application curl -sk -w %{http_code}\\n " + APP_URL;
 
     public void restartApp() {
         appContainerDown();
