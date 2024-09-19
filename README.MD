@@ -8,14 +8,18 @@ This project automates the setup and verification of the **UniFi Network Applica
 
 Before you begin, ensure you have the following installed on your machine:
 
-- **Java Development Kit (JDK) 17** or higher
-- **Maven** (for dependency management and build)
-- **Docker** (for running the UniFi Network Application)
-- **Chrome Browser** (if using ChromeDriver for tests)
-- **ChromeDriver** (ensure it matches your Chrome version, or let Selenide manage it automatically)
-
+- **Java Development Kit (JDK) 21** or higher
+- **Maven 3.9.5+** (for dependency management and build)
+- **Docker Desktop 4.34.2+** (for running the UniFi Network Application)
+- **Chrome Browser Version v128+** (if using ChromeDriver for tests)
+- **ChromeDriver v128+** (ensure it matches your Chrome version, or let Selenide manage it automatically)
 ---
 
+> **Warning**
+>
+> This code is tested only on **MacOS Sequoia v15.0**. For **Windows** machine some addition setup may be require. 
+> Also command line scripts might be different.
+ 
 ## Project Structure
 
 
