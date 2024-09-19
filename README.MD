@@ -37,10 +37,9 @@ Before you begin, ensure you have the following installed on your machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/yzerk/network-app-tests.git
 cd network-app-tests
 ```
-Replace `<repository-url>` with the URL of your repository.
 
 ### 2. Start the UniFi Network Application
 
@@ -121,17 +120,30 @@ Run all tests in a class:
 ```bash
 mvn test -Dtest=SetupAppViaUITest
 ```
+### 3. Allure Report
+Generate report
+```bash
+mvn allure:report
+```
+Open report
+```bash
+mvn allure:serve
+```
+this command should open report in default browser.
 
+![img.png](img.png)
 ---
 
 ## Technologies Used
 
 - **Java 21**
 - **Maven**: Dependency management and build tool
-- **Selenide 7.4.3**: Simplifies browser automation for web UI tests
-- **Rest-Assured 5.5.0**: Simplifies testing of REST APIs
-- **AssertJ 3.24.2**: Provides fluent assertions for better readability
-- **TestNG 7.8.0**: Testing framework for running and managing tests
+- **Selenide**: Simplifies browser automation for web UI tests
+- **Rest-Assured**: Simplifies testing of REST APIs
+- **Awaitility**: a library which provides a simple domain-specific language (DSL) for asynchronous systems testing.
+- **AssertJ**: Provides fluent assertions for better readability
+- **TestNG**: Testing framework for running and managing tests
+- **Allure**: Reporting tool for displaying test execution results
 - **Docker**: Containerization for running the UniFi Network Application
 
 ---
